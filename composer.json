@@ -1,0 +1,13 @@
+{
+    "name": "arch/multicurl",
+    "description": "Multi Curl request with batch and parallel request",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "metallurgical",
+            "email": "norlihazmey89@gmail.com"
+        }
+    ],
+    "require": {}
+}
