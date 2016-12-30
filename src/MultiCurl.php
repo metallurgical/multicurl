@@ -76,7 +76,7 @@ class MultiCurl {
 	    	// check for value zero 
 	    	// or below than that
     		if ( $perRequest <= 0 )
-    			throw new Exception( '1 request per second MIN, please provide value more than 0.' );    	
+    			throw new Exception( '1 data per request MIN, please provide value more than 0.' );    	
     		// check if per request value
     		// is more than url provided
 	    	if ( $perRequest > count( $urls ) )
@@ -84,14 +84,7 @@ class MultiCurl {
 	    	// finally assing to private member
 	    	$this->perRequest = $perRequest;
 
-	    }
-	    else {
-	    	// check for value zero 
-	    	// or below than that
-	    	if ( $perRequest <= 0 )
-	    		throw new Exception( '1 request per second MIN, please provide value more than 0.' );
-
-	    }
+	    }	    
 
 
     }
