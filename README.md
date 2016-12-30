@@ -2,8 +2,7 @@
 Multi Curl with batch and parallel request. As the name suggest, you can make a batch request or parallel request at once. 
 
 # Batch Request
-Will split array data provided, and request part by part to minimize workload during request instead of requesting at once. Defining how much
-the number of data per request is at your own choices.
+Will split array data provided, and request part by part to minimize workload during request instead of requesting at once. Defining how much the number of data per request is at your own choices. The batch request simply divided array of url(s) part by part and doing the request one by one until finish. While waiting for next queue of request, you can provide callback for each batch to execute.
 
 # Paraller Request
 Passed in the whole set of array data and will request all at once.
