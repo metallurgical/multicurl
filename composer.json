@@ -2,12 +2,21 @@
     "name": "arch/multicurl",
     "description": "Multi Curl request with batch and parallel request",
     "type": "library",
-    "license": "MIT",
+    "license": "MIT License",
     "authors": [
         {
             "name": "metallurgical",
             "email": "norlihazmey89@gmail.com"
+        },
+        {
+            "name": "AfiqAbdullah",
+            "email": "mohamadafiqabdullah@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Arch\\MultiCurl\\": "src/"
+        }
+    }
 }
