@@ -23,6 +23,11 @@ class MultiCurl {
 	*/
 	private $results        = array();
 	/**
+	 * The whole set of Result/Response
+	 * @var array
+	 */
+	private $resultSet 		= array();
+	/**
 	* Curl instance/ID(s)
 	* @var array
 	*/
@@ -276,13 +281,17 @@ class MultiCurl {
 	    foreach( $this->curly as $id => $c ) {
 
 	        $this->results[$id] = curl_multi_getcontent( $c );
+	        array_push( $this->resultSet, $this->results[$id] );
 	        curl_multi_remove_handle( $mh, $c );
 
 	    }
 	    // close connection when finish
 	    curl_multi_close( $mh );
 
-	    return $this->results;
+	    if ( $this->batchOperation )
+	    	return $this->results;
+	    else
+	    	return $this->resultSet;
 
     }
 
